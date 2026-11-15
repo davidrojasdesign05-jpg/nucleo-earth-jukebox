@@ -26,6 +26,9 @@
   button:active { transform: scale(0.96); }
   button:disabled { opacity: .35; cursor: not-allowed; transform: none; }
   button:focus-visible { outline: 1.5px solid var(--ink); outline-offset: 4px; }
+  .opcion { display: flex; align-items: center; gap: 12px; min-height: 48px; margin-top: 16px; font-size: 16px; line-height: 24px; color: var(--on-panel); cursor: pointer; }
+  .opcion input { width: 20px; height: 20px; accent-color: var(--ink); margin: 0; }
+  .opcion input:focus-visible { outline: 1.5px solid var(--ink); outline-offset: 4px; }
   #estado { font-size: 12px; line-height: 18px; margin-top: 24px; color: var(--on-panel); }
   #ayuda { position: fixed; left: 16px; bottom: 16px; font-size: 12px; line-height: 18px; color: var(--muted); z-index: 1; transition: opacity 1s; pointer-events: none; }
   body.sensorial #ayuda { opacity: 0; }
@@ -40,10 +43,11 @@
       <button id="vr">Entrar en VR</button>
       <button id="pantalla" class="sec">Empezar en pantalla</button>
     </div>
+    <label class="opcion"><input type="checkbox" id="descripciones"> Mostrar descripciones en texto y voz</label>
     <div id="estado">Usa audífonos.</div>
   </div>
 </div>
-<div id="ayuda" hidden>Arrastra para mirar · ← → giran el lobby · Enter entra · 1 2 3 cambian de lugar · L lobby</div>
+<div id="ayuda" hidden>Arrastra para mirar · ← → giran el lobby · Enter entra · I dato · D descripciones · L lobby</div>
 <script src="app.js"></script>
 </body>
 </html>
